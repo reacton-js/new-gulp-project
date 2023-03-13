@@ -1,6 +1,6 @@
 {
   "name": "new-gulp-project",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "New Gulp development project",
   "main": "gulpfile.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "gulp",
     "project",
     "html",
-    "web"
+    "web",
+    "pug",
+    "bem"
   ],
   "author": "",
   "license": "ISC",
