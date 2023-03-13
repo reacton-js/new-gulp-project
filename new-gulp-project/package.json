@@ -1,0 +1,45 @@
+{
+  "name": "new-gulp-project",
+  "version": "1.0.0",
+  "description": "New Gulp development project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "new",
+    "gulp",
+    "project",
+    "html",
+    "web"
+  ],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.1.0",
+    "gulp-if": "^3.0.0",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-pug": "^5.0.0",
+    "gulp-pugbem": "^2.2.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprites": "^4.1.2",
+    "multipipe": "^4.0.0",
+    "node-sass": "^7.0.3",
+    "sass": "^1.54.9",
+    "webpack": "^5.74.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

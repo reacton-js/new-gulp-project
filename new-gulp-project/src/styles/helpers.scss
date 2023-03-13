@@ -1,0 +1,25 @@
+$lightColor: #eee;
+$mediumColor: gray;
+$darkColor: #222;
+$mainColor: orangered;
+
+$smallScreen: 640;
+$mediumScreen: 992;
+$largeScreen: 1200;
+
+$duration: .3s;
+$radius: 3px;
+$opacity: .7;
+
+
+@mixin min($size) {
+  @media (min-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin max($size) {
+  @media (max-width: #{$size}px) {
+    @content;
+  }
+}

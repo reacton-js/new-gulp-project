@@ -1,0 +1,5 @@
+*.log
+new-gulp-project/README.md
+node_modules/
+gitflic/
+npm/

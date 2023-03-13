@@ -1,0 +1,35 @@
+:root {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $darkColor;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, input, [type="submit"], textarea {
+  &:active, &:focus  {
+    outline: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  user-select: none;
+}
+
+[class*=--wrapper]  {
+  width: 100%;
+  max-width: #{$largeScreen}px;
+  padding: 0 15px;
+}

@@ -1,0 +1,153 @@
+$linkHeight: 45px;
+
+.menu {
+  width: 100%;
+  min-height: $linkHeight;
+  position: sticky;
+  top: 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding: 0 10px;
+    color: $darkColor;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  @include max($smallScreen - 1) {
+    &__inner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      flex-flow: row wrap;
+      align-content: flex-start;
+      height: $linkHeight;
+      padding: 0;
+      overflow-y: hidden;
+      background: linear-gradient($mainColor $linkHeight, rgba(.2, .2, .2, .8) $linkHeight);
+      transition: height $duration;
+
+      &--open {
+        height: 100vh;
+        animation: overflow 0s $duration forwards;
+      }
+    }
+
+    &__link {
+      margin-top: 4px;
+      margin-right: 6px;
+      transition: opacity $duration;
+
+      &:hover {
+        opacity: $opacity;
+      }
+    }
+
+    &__home {
+      height: 30px;
+      width: 30px;
+    }
+
+    &__button {
+      position: relative;
+      width: 25px;
+      height: 16px;
+      margin-right: 10px;
+      padding: 0;
+      border: none;
+      border-top: 2px solid $lightColor;
+      border-bottom: 2px solid $lightColor;
+      background-color: transparent;
+      cursor: pointer;
+      transition: opacity $duration;
+
+      &:hover {
+        opacity: $opacity;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -1px;
+        height: 2px;
+        width: 100%;
+        background-color: $lightColor;
+        transition: transform $duration;
+      }
+
+      &--close {
+        border: none;
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &__item {
+      height: $linkHeight;
+      display: flex;
+      align-items: center;
+
+      &:not(&--active) {
+        width: 100%;
+        background: $lightColor;
+        border-top: 1px solid #d2d2d2;
+
+        &:hover {
+          color: $lightColor;
+          background: $darkColor;
+        }
+      }
+
+      &--active {
+        order: -1;
+        margin-right: auto;
+        color: $lightColor;
+        background: transparent;
+      }
+    }
+  }
+
+  @include min($smallScreen) {
+    min-height: auto;
+    background: $lightColor;
+    box-shadow: 0 10px 5px -10px #bbb;
+
+    &__inner {
+      justify-content: flex-end;
+    }
+
+    &__link,
+    &__button {
+      display: none;
+    }
+
+    &__item {
+      margin: 8px 0 8px 10px;
+      padding: 5px;
+      transition: opacity $duration;
+
+      &:hover {
+        opacity: $opacity;
+      }
+    }
+  }
+}
+
+@keyframes overflow {
+  100% {
+    overflow-y: auto;
+  }
+}

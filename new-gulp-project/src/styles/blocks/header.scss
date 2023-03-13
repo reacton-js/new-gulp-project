@@ -1,0 +1,21 @@
+.header {
+  margin-bottom: 50px;
+  padding: 0;
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__img {
+    min-width: 450px;
+  }
+}
+
+@include min($smallScreen) {
+  .header {
+    &__img {
+      min-width: 900px;
+    }
+  }
+}
