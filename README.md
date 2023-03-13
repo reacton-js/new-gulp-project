@@ -1,8 +1,12 @@
 ## New Gulp development project
 
+[GitHub](https://github.com/reacton-js/new-gulp-project) | [NpmJS](https://www.npmjs.com/package/new-gulp-project)
+
 ![rigl](https://raw.githubusercontent.com/reacton-js/new-gulp-project/main/new-gulp-project/logo.jpg)
 
 The project uses the [BEM](https://en.bem.info/methodology/quick-start/) methodology and the [gulp-pugbem](https://www.npmjs.com/package/gulp-pugbem) plugin.
+
+<br>
 
 #### Install
 
