@@ -142,6 +142,20 @@ $linkHeight: 45px;
       &:hover {
         opacity: $opacity;
       }
+
+      &--active {
+        position: relative;
+        &::before {
+          display: block;
+          width: 100%;
+          height: 1px;
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 2px;
+          background: linear-gradient(to right, transparent, $mainColor 50%, transparent);
+        }
+      }
     }
   }
 }

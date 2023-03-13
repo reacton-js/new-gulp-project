@@ -1,4 +1,5 @@
 *.log
+logo.xcf
 command.txt
 new-gulp-project/README.md
 node_modules/
