@@ -13,7 +13,7 @@ $linkHeight: 45px;
   }
 
   &__item {
-    padding: 0 10px;
+    padding: 0 20px;
     color: $darkColor;
     font-size: 15px;
     text-decoration: none;
@@ -58,7 +58,7 @@ $linkHeight: 45px;
       position: relative;
       width: 25px;
       height: 16px;
-      margin-right: 10px;
+      margin-right: 20px;
       padding: 0;
       border: none;
       border-top: 2px solid $lightColor;
@@ -113,6 +113,8 @@ $linkHeight: 45px;
 
       &--active {
         order: -1;
+        margin-left: 10px;
+        padding: 0 10px;
         margin-right: auto;
         color: $lightColor;
         background: transparent;
