@@ -4,6 +4,7 @@ $linkHeight: 45px;
   width: 100%;
   min-height: $linkHeight;
   position: sticky;
+  z-index: 1;
   top: 0;
 
   &__inner {
