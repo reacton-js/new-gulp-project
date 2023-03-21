@@ -28,7 +28,7 @@ img {
   user-select: none;
 }
 
-[class*=--wrapper]  {
+[class*="--wrapper"]  {
   width: 100%;
   max-width: #{$largeScreen}px;
   padding: 0 20px;
