@@ -1,6 +1,6 @@
 {
   "name": "new-gulp-project",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "New Gulp development project",
   "main": "gulpfile.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "pug",
     "bem"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "https://github.com/reacton-js",
+  "license": "MIT",
   "browserslist": [
     "defaults"
   ],
