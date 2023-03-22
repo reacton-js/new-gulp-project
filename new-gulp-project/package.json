@@ -1,6 +1,6 @@
 {
   "name": "new-gulp-project",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "New Gulp development project",
   "main": "gulpfile.js",
   "scripts": {
@@ -21,10 +21,10 @@
     "defaults"
   ],
   "devDependencies": {
-    "@babel/core": "^7.19.1",
-    "@babel/preset-env": "^7.19.1",
-    "babel-loader": "^8.2.5",
-    "browser-sync": "^2.27.10",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
@@ -39,9 +39,9 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprites": "^4.1.2",
     "multipipe": "^4.0.0",
-    "node-sass": "^7.0.3",
-    "sass": "^1.54.9",
-    "webpack": "^5.74.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.59.3",
+    "webpack": "^5.76.2",
     "webpack-stream": "^7.0.0"
   }
 }
