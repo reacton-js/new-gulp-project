@@ -1,4 +1,5 @@
 *.xcf
 command.txt
 new-gulp-project/*.md
+new-gulp-project/logo.jpg
 node_modules/
