@@ -1,14 +1,14 @@
 const buttonUp = document.querySelector('.button-up')
 
 buttonUp.addEventListener('click', () => {
-  document.body.scrollIntoView({
-    block: 'start',
+  window.scrollTo({
+    top: 0,
     behavior: 'smooth'
   })
 })
 
 window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 150) {
+  if (window.scrollY > 150) {
     buttonUp.classList.add('button-up--show')
   }
   else {

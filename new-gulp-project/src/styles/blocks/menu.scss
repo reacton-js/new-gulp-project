@@ -127,6 +127,11 @@ $linkHeight: 45px;
     min-height: auto;
     background: $lightColor;
     box-shadow: 0 10px 5px -10px #bbb;
+    transition: transform $duration;
+
+    &--hide {
+      transform: translateY(-100%);
+    }
 
     &__inner {
       justify-content: flex-end;

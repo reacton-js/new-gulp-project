@@ -1,5 +1,7 @@
-const inner = document.querySelector('.menu__inner')
+const menu = document.querySelector('.menu')
+const inner = menu.querySelector('.menu__inner')
 const button = inner.querySelector('.menu__button')
+let offsetY = 0
 
 function toggle() {
   button.classList.toggle('menu__button--close')
@@ -25,4 +27,14 @@ document.addEventListener('keyup', event => {
     remove()
     inner.scrollTop = 0
   }
+})
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 150 && offsetY < window.scrollY) {
+    menu.classList.add('menu--hide')
+  }
+  else {
+    menu.classList.remove('menu--hide')
+  }
+  offsetY = window.scrollY
 })
