@@ -13,6 +13,10 @@ $linkHeight: 45px;
     margin: 0 auto;
   }
 
+  &__logo {
+    margin-right: auto;
+  }
+
   &__item {
     padding: 0 20px;
     color: $darkColor;
@@ -38,6 +42,10 @@ $linkHeight: 45px;
         height: 100vh;
         animation: overflow 0s $duration forwards;
       }
+    }
+
+    &__logo {
+      color: $lightColor;
     }
 
     &__link {
@@ -109,13 +117,14 @@ $linkHeight: 45px;
         &:hover {
           color: $lightColor;
           background: $darkColor;
+          border-top-color: $darkColor;
         }
       }
 
       &--active {
         order: -1;
-        margin-left: 10px;
-        padding: 0 10px;
+        margin-left: 15px;
+        padding: 0 5px;
         margin-right: auto;
         color: $lightColor;
         background: transparent;
