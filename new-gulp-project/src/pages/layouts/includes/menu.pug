@@ -1,15 +1,18 @@
-aside.menu
-  nav._inner.-wrapper
-    a(href="/").logo._logo New Project
-    a(href="/")._link
-      svg.home._home
-        use(xlink:href="svg/symbols.svg#home")
-    button._button
-    a._item.-active(href="/") Home
-    a._item(href="/about.html") About
-    a._item(href="#") Page3
-    a._item(href="#") Page4
-    a._item(href="#") Page5
-    a._item(href="#") Page6
-    a._item(href="#") Page7
-    a._item(href="#") Page8
+mixin menu(page)
+  - var hasActive = name => page == name ? 'menu__item--active' : ''
+
+  aside.menu
+    nav._inner.-wrapper
+      a(href="/").logo._logo= siteName
+      a(href="/")._link
+        svg.home._home
+          use(xlink:href="svg/symbols.svg#home")
+      button._button
+      a._item(href="/" class= hasActive('index')) Home
+      a._item(href="/about" class= hasActive('about')) About
+      a._item(href="/contacts" class= hasActive('contacts')) Contacts
+      a._item(href="#") Page4
+      a._item(href="#") Page5
+      a._item(href="#") Page6
+      a._item(href="#") Page7
+      a._item(href="#") Page8

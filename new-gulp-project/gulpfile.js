@@ -82,6 +82,7 @@ function symbols() {
 function serve(done) {
   browserSync.init({
     server: { baseDir: './dist' },
+    extensions: ['html'],
     notify: false,
     open: false
   })
@@ -99,7 +100,7 @@ function clean() {
 }
 
 function copy() {
-  return gulp.src('src/assets/**/*.*')
+  return gulp.src(['src/assets/.*', 'src/assets/**/*.*'])
     .pipe(gulp.dest('dist'))
 }
 
