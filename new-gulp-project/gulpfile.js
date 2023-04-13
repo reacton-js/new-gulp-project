@@ -42,7 +42,10 @@ function styles() {
       ))
     )))
     .pipe(concat('style.css'))
-    .pipe(gulpIf(mode === 'production', cleanCSS()))
+    .pipe(gulpIf(mode === 'production', multipipe(
+      cleanCSS(),
+      gulp.dest('htdocs/css')
+    )))
     .pipe(gulp.dest('dist/css'))
 }
 
@@ -66,6 +69,7 @@ function scripts() {
         ]
       }
     }))
+    .pipe(gulpIf(mode === 'production', gulp.dest('htdocs/js')))
     .pipe(gulp.dest('dist/js'))
 }
 
@@ -76,6 +80,7 @@ function symbols() {
       preview: false,
       svg: { symbols: 'symbols.svg' }
     }))
+    .pipe(gulpIf(mode === 'production', gulp.dest('htdocs/svg')))
     .pipe(gulp.dest('dist/svg'))
 }
 
@@ -101,6 +106,7 @@ function clean() {
 
 function copy() {
   return gulp.src(['src/assets/.*', 'src/assets/**/*.*'])
+    .pipe(gulpIf(file => mode === 'production' && file.basename !== '.htaccess', gulp.dest('htdocs')))
     .pipe(gulp.dest('dist'))
 }
 

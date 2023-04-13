@@ -5,6 +5,12 @@
   &__banner {
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &--small {
+      max-height: 250px;
+    }
   }
   
   &__img {

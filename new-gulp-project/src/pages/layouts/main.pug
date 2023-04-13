@@ -1,5 +1,5 @@
 include helpers
-include includes/menu
+block helpers
 
 doctype html
 html(lang="en")
@@ -11,8 +11,8 @@ html(lang="en")
     title= siteName
     style @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
     link(rel="stylesheet", href="css/style.css")
-  body
-    block menu
+  body(id= pageName)
+    include includes/menu
     include includes/header
     main.content.-wrapper
       block content
