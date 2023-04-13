@@ -66,6 +66,5 @@
   <button class="button-up"></button>
 
   <script src="js/script.js"></script>
-
 </body>
 </html>
