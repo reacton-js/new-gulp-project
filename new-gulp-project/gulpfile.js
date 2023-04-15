@@ -12,7 +12,6 @@ const concat = require('gulp-concat')
 const multipipe = require('multipipe')
 const browserSync = require('browser-sync').create()
 const svgSprite = require('gulp-svg-sprites')
-const del = require('gulp-clean')
 let mode = 'development'
 
 function pages() {
@@ -99,14 +98,9 @@ function reload(done) {
   done()
 }
 
-function clean() {
-  return gulp.src('dist')
-    .pipe(del())
-}
-
 function copy() {
   return gulp.src(['src/assets/.*', 'src/assets/**/*.*'])
-    .pipe(gulpIf(file => mode === 'production' && file.basename !== '.htaccess', gulp.dest('htdocs')))
+    .pipe(gulpIf(mode === 'production', gulp.dest('htdocs')))
     .pipe(gulp.dest('dist'))
 }
 
@@ -123,7 +117,7 @@ function watch() {
   gulp.watch('src/assets/**/*', gulp.series(copy, reload))
 }
 
-const dev = gulp.series(clean, copy, gulp.parallel(pages, styles, scripts, symbols), serve, watch)
+const dev = gulp.series(copy, gulp.parallel(pages, styles, scripts, symbols), serve, watch)
 const build = gulp.series(public, dev)
 
 gulp.task('default', dev)
